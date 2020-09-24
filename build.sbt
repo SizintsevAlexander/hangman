@@ -1,6 +1,4 @@
 import _root_.sbt.Keys._
-import wartremover.Wart
-import wartremover.Wart._
 
 name := "hangman"
 
@@ -19,6 +17,7 @@ scalacOptions := List(
   "-Ymacro-annotations"
 )
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.0" % "test"
+coverageEnabled in(Test, compile) := true
 
-wartremoverErrors ++= Seq[Wart](Any, AsInstanceOf, Null, Return, Throw, While, MutableDataStructures)
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.0" % Test
+

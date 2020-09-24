@@ -1,5 +1,5 @@
 case class Hangman(hiddenWord: String) {
-  var wordState     = "*" * hiddenWord.length
+  var wordState = "*" * hiddenWord.length
   var mistakeAmount = 0
 
   def guessLetter(letter: Char): Boolean = {
