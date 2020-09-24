@@ -17,7 +17,6 @@ scalacOptions := List(
   "-Ymacro-annotations"
 )
 
-coverageEnabled in(Test, compile) := true
+coverageEnabled in (Test, compile) := true
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.0" % Test
-
